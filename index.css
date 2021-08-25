@@ -1,0 +1,247 @@
+html.dark-theme{
+ --main-color: #ffe100;
+ --title: #EFF3F5;
+ --content: #C8CDD0;
+ --light:#A0A7AC;
+ --border-color: #2A3B47;
+ --container: #212E36;
+ --header: #23232e;
+ --body: #192229;
+ --white: #f0f0f0;
+ scroll-behavior: smooth;
+}
+html{
+ --main-color: #ffe313;
+ --title: #2A3B47;
+ --content: #697477;
+ --light:#A0A7AC;
+ --border-color: #EFF3F5;
+ --container: #FFFFFF;
+ --body: #FBFBFE;
+ --header: #23232e;
+ --white: #f0f0f0;
+ scroll-behavior: smooth;
+}
+body::-webkit-scrollbar{
+ width: 1px;
+ height: 0;
+}
+body::-webkit-scrollbar-track{
+ background-color: var(--body); 
+}
+body::-webkit-scrollbar-thumb{
+ background-color: var(--main-color);
+}
+*{
+ margin: 0;
+ font-family: sans-serif;
+ box-sizing: border-box;
+}
+.grid-layout {
+ background-color: var(--body);
+ display: grid;
+ grid-template:
+ "m m h" 1fr
+ "f f f" 100px/
+ 2fr 2fr 80px ;
+ grid-gap: 0; 
+}
+.grid-layout .header {
+ grid-area: h;
+ width: 100%;
+ height: 100%;
+}
+.header .navbar {
+ background-color:var(--header);
+ width: 80px;
+ height: 100%;
+ position: fixed;
+ bottom: 0;
+ right: 0;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: center;
+ padding: 10px;
+ gap: 50px;
+ z-index: 999;
+ transition: width 0.3s ease-in-out;
+}
+.header .navbar:hover {
+ width: 180px;
+ padding: 20px;
+}
+.header .navbar .nav-item:hover .nav-item-text,
+.header .navbar .nav-item:hover a{
+ color: var(--main-color);
+}
+.header .navbar:hover .nav-item .nav-item-text{
+ display: inline-block;
+}
+.navbar .nav-item{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 12px;
+ width: 100%;
+ height: 5rem;
+ cursor: pointer;
+ color: #fff;
+}
+.navbar .nav-item a{
+ font-size: 32px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: var(--white);
+ text-decoration: none;
+ transition: color 0.3s ;
+}
+.navbar .nav-item .nav-item-text{
+ font-size: 20px;
+ font-weight: bold;
+ display: none;
+ transition: color 0.3s ;
+ color: var(--white);
+}
+.navbar .nav-item.darkmode-btn{
+ margin-top: auto;
+}
+.home{
+ width: 100%;
+ margin: auto;
+ height: 100vh;
+ background: rgba(0, 0, 0, 0.6) url("assets/home.jpg") no-repeat center / cover;
+ background-blend-mode: soft-light;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.home .title, .home .subtitle {
+ color: var(--main-color);
+ font-size: 50px;
+}
+.home .subtitle{
+ font-style: italic;
+}
+main{
+ grid-area: m;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+main section {
+ background-color: var(--container);
+ height: 500px;
+ width: 100%;
+ margin: 100px 100px;
+}
+footer {
+ grid-area: f;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: blue;
+}
+
+@media(max-width:768px){
+ .grid-layout {
+  grid-template:
+  "m m m" 1fr
+  "f f f" 100px
+  "h h h" 70px/
+  100vw ;
+ }
+ .grid-layout .header {
+  grid-area: h;
+  width: 100%;
+  height: 100%;
+ }
+ .header .navbar {
+  width: 100vw;
+  height: 70px;
+  left: 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 30px;
+ }
+ .header .navbar:hover {
+  width: 100vw;
+ }
+ .navbar .nav-item{
+  gap: 10px;
+  width: 100%;
+  height: 4rem;
+ }
+ .navbar .nav-item a{
+  font-size: 22px;
+ }
+ .navbar .nav-item .nav-item-text{
+  font-size: 18px;
+ }
+ .navbar .nav-item.darkmode-btn{
+  margin-top: 0;
+ }
+ .home .title, .home .subtitle {
+  font-size: 35px;
+  text-align: center;
+ }
+}
+@media(max-width:600px){
+ .navbar .nav-item{
+  height: 3.5rem;
+ }
+ .navbar .nav-item a{
+  font-size: 20px;
+ }
+ .navbar .nav-item .nav-item-text{
+  font-size: 10px;
+ }
+ .home .title, .home .subtitle {
+  text-align: center;
+  font-size: 30px;
+ }
+}
+@media(max-width:455px){
+ .navbar .nav-item{
+  gap: 3px;
+  height: 3rem;
+ }
+ .navbar .nav-item a{
+  font-size: 18px;
+ }
+ .navbar .nav-item .nav-item-text{
+  font-size: 10px;
+ }
+ .home .title, .home .subtitle {
+  text-align: center;
+  font-size: 30px;
+ }
+}
+@media(max-width:400px){
+ .header .navbar {
+  padding: 5px;
+  gap: 10px;
+ }
+ .navbar .nav-item{
+  height: 3rem;
+ }
+ .navbar .nav-item a{
+  font-size: 15px;
+ }
+ .navbar .nav-item .nav-item-text{
+  font-size: 10px;
+ }
+ .home .title, .home .subtitle {
+  text-align: center;
+  font-size: 30px;
+ }
+}
