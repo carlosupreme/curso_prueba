@@ -12,6 +12,7 @@ d.addEventListener("DOMContentLoaded", ()=>{
 })
 //FUNCTIONS
 function darkMode(e){
+ e.preventDefault()
  html.classList.toggle("dark");
  let theme = "light";
  if (html.classList.contains("dark")) {
