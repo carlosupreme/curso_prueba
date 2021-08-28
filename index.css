@@ -218,6 +218,9 @@ footer .social-media a:hover{
   text-align: center;
   font-size: 30px;
  }
+ footer {
+  flex-direction:column;
+ }
 }
 @media(max-width:455px){
  .navbar .nav-item{
@@ -230,6 +233,13 @@ footer .social-media a:hover{
  .home .title, .home .subtitle {
   text-align: center;
   font-size: 30px;
+ }
+ footer .social-media{
+   gap: 20px;
+ }
+ footer .social-media a,
+ footer .copy{
+   font-size: 17px;
  }
 }
 @media(max-width:400px){
