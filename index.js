@@ -17,7 +17,7 @@ function darkMode(e){
 }
 
 function getRandomSection(){
-  let seccion = Math.round((Math.random())*14)+1
-  let href = `#section${seccion}`
+  let seccion = Math.round((Math.random())*14)+1 //devuelve un numero random de [1-15]
+  let href = `#section${seccion}` //se le asigna al href del enlace
   randomBtn.setAttribute('href',href)
 }
