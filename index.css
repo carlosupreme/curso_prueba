@@ -182,25 +182,27 @@ footer .social-media a:hover{
 }
 .search-input{
   color: var(--content);
-  gap: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  margin:auto;
   font-size: 15px;
+  border: 1px solid black;
 }
-.search-input input:focus {
-  box-shadow:  0 2px 10px -5px var(--main-color);
+.search-input input {
+  background-color: black;
   outline: none;
   border: none;
-}
-.search-input span {
   padding: 5px;
-  border: 2px solid var(--main-color);
-  cursor: pointer;
+  color: var(--light);
 }
-.search-input span.onclick{
+.search-input span  {
+  padding: 5px 20px;
+  cursor: pointer;
+  color: var(--light);
+  background-color: var(--title);
+}
+.search-input span.onclick i{
   transform: scale(0.9);
 }
 

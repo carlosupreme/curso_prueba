@@ -28,15 +28,16 @@ function getRandomSection(){
   randomBtn.setAttribute('href',href)
 }
 function deploySearchContainer(){
+  if(buscarEnSearch.classList.contains("onclick") === true){
+    buscarEnSearch.classList.remove("onclick")
+  }
   searchBtn.removeAttribute("href")
   searchContainer.classList.toggle("is-active")
 }
 function buttonOnclick(){
-  if(!buscarEnSearch.classList.contains("onclick")){
-    buscarEnSearch.classList.add("onclick")
-  }else{
-    buscarEnSearch.classList.remove("onclick")
-  }
+  buscarEnSearch.classList.add("onclick")
   searchContainer.classList.toggle("is-active")
-  inputEnSearch.value = ""
+  setTimeout(()=>{
+    inputEnSearch.value = ""
+  },300)
 }
