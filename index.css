@@ -100,7 +100,7 @@ body::-webkit-scrollbar-thumb{
  width: 100%;
  margin: auto;
  height: 100vh;
- background: rgba(0, 0, 0, 0.6) url("assets/home.jpg") no-repeat center / cover;
+ background: rgba(0, 0, 0, 0.6) url("assets/laptop_girl.svg") no-repeat center / cover;
  background-blend-mode: soft-light;
  display: flex;
  flex-direction: column;
@@ -196,13 +196,13 @@ footer .social-media a:hover{
   padding: 5px;
   color: var(--light);
 }
-.search-input span  {
+.search-input a  {
   padding: 5px 20px;
   cursor: pointer;
   color: var(--light);
   background-color: var(--title);
 }
-.search-input span.onclick i{
+.search-input a.onclick i{
   transform: scale(0.9);
 }
 
