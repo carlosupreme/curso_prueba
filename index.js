@@ -1,58 +1,30 @@
-//VARIABLES
-const d=document,
-darkModeBtn = d.querySelector(".darkmode-btn"),
-html = d.querySelector("html"),
-randomBtn = d.querySelector("#random"),
-searchBtn = d.querySelector("#searchBtn"),
-searchContainer = d.querySelector(".search-container"),
-footer = d.querySelector("footer"),
-buscarEnSearch = d.querySelector(".search-input a"),
-inputEnSearch = d.querySelector(".search-input input"),
-sectionsNumbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] 
-//EVENT LISTENERS
-d.addEventListener("DOMContentLoaded", ()=>{
- darkModeBtn.addEventListener('click',darkMode)
- randomBtn.addEventListener('click', getRandomSection)
- searchBtn.addEventListener('click', deploySearchContainer)
- buscarEnSearch.addEventListener('click', buttonOnclick)
- inputEnSearch.addEventListener('input', searching)
-})
-//FUNCTIONS
-function darkMode(e){
- e.preventDefault()
- html.classList.toggle("dark")
-}
+const d=document
 
-function getRandomSection(){
-  let seccion = Math.round((Math.random())*14)+1 //devuelve un numero random de [1-15]
-  let href = `#section${seccion}` //se le asigna al href del enlace
-  randomBtn.setAttribute('href',href)
+// SECTION 1
+const $span = d.querySelectorAll('#section1 .time'),
+navidad2021 = '25 dec 2021, 00:00:00',
+añoNuevo2022 = '1 Jan 2022, 00:00:00'
+ 
+function countdown(){
+  const navidad = new Date(navidad2021),
+  newyear = new Date(añoNuevo2022)
+  let hoy = new Date(),
+  segundos = Math.floor((navidad - hoy)/1000 % 60),// navidad
+  minutos = Math.floor(((navidad - hoy)/1000)/60 % 60),// navidad
+  horas = Math.floor((((navidad - hoy)/1000)/60)/60 % 24),// navidad
+  dias = Math.floor(((((navidad - hoy)/1000)/60)/60)/24),// navidad
+  seconds = Math.floor((newyear - hoy)/1000 % 60),// new Year
+  minutes = Math.floor(((newyear - hoy)/1000)/60 % 60),// new Year
+  hours = Math.floor((((newyear - hoy)/1000)/60)/60 % 24),// new Year
+  days = Math.floor(((((newyear - hoy)/1000)/60)/60)/24)// new Year
+  
+  $span[0].innerHTML = dias // navidad
+  $span[1].innerHTML = horas // navidad
+  $span[2].innerHTML = minutos // navidad
+  $span[3].innerHTML = segundos // navidad
+  $span[4].innerHTML = days // new Year
+  $span[5].innerHTML = hours // new Year
+  $span[6].innerHTML = minutes // new Year
+  $span[7].innerHTML = seconds // new Year
 }
-function deploySearchContainer(){
-  if(buscarEnSearch.classList.contains("onclick") === true){
-    buscarEnSearch.classList.remove("onclick")
-  }
-  searchBtn.removeAttribute("href")
-  searchContainer.classList.toggle("is-active")
-}
-function buttonOnclick(){
-  buscarEnSearch.classList.add("onclick")
-  searchContainer.classList.toggle("is-active")
-}
-function searching(){
-  let value = inputEnSearch.value
-  value.toLowerCase()
-  value.trim()
-  let x = 'section'
-  const sections = [`${x}1`,`${x}2`,`${x}3`,`${x}4`,`${x}5`,`${x}6`,`${x}7`,`${x}8`,`${x}9`,`${x}10`,`${x}11`,`${x}12`,`${x}13`,`${x}14`,`${x}15`]
-  const unaSection = sections.splice(0,sections.length)
-  for (let i = 0; i < unaSection.length; i++) {
-    if(value.includes(unaSection[i])){
-      buscarEnSearch.setAttribute('href',`#${value}`)
-      setTimeout(()=>buscarEnSearch.click(),500)
-    }else{
-      break
-    }
-  }
-  // console.log('ayuda')
-}
+setInterval(countdown, 1000);

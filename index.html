@@ -12,35 +12,52 @@
   <link rel="stylesheet" href="index.css">
 </head>
 
-<body class="grid-layout">
-  <header class="header">
-    <nav class="navbar">
-      <div class="nav-item logo">
-        <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/JavaScript">
-          <i class="fab fa-js"></i>
-        </a>
-      </div>
-      <div class="nav-item">
-        <a href="#home"><i class="fas fa-home"></i></a>
-      </div>
-      <div class="nav-item">
-        <a id="random" href=""><i class="fas fa-random"></i></a>
-      </div>
-      <div class="nav-item">
-        <a id="searchBtn" href="#"><i class="fas fa-search"></i></a>
-      </div>
-      <div class="nav-item darkmode-btn">
-        <a id="darkmode-btn" href="/"><i class="fas fa-sun"></i></a>
-      </div>
-    </nav>
-  </header>
+<body class="body">
   <main class="main">
     <section class="home" id="home">
       <h1 class="title">CURSO DE JAVASCRIPT</h1>
       <h2 class="subtitle">Ejercicios</h2>
     </section>
     <section id="section1">
-      <h2 class="title">Seccion 1</h2>
+      <div class="countdown container">
+        <h2 class="title">Navidad</h2>
+        <div class="dias c">
+          <span class="time">0</span>
+          <span class="text">Dias</span>
+        </div>
+        <div class="horas c">
+          <span class="time">0</span>
+          <span class="text">Horas</span>
+        </div>
+        <div class="minutos c">
+          <span class="time">0</span>
+          <span class="text">Minutos</span>
+        </div>
+        <div class="segundos c">
+          <span class="time">0</span>
+          <span class="text">Segundos</span>
+        </div>
+      </div>
+      <br>
+      <div class="countdown container">
+        <h2 class="title">Año Nuevo</h2>
+        <div class="c">
+          <span class="time">0</span>
+          <span class="text">Dias</span>
+        </div>
+        <div class="c">
+          <span class="time">0</span>
+          <span class="text">Horas</span>
+        </div>
+        <div class="c">
+          <span class="time">0</span>
+          <span class="text">Minutos</span>
+        </div>
+        <div class="c">
+          <span class="time">0</span>
+          <span class="text">Segundos</span>
+        </div>
+      </div>
     </section>
     <section id="section2">
       <h2 class="title">Seccion 2</h2>
@@ -95,12 +112,12 @@
       <a target="blank" href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
     </div>
   </footer>
-  <div class="search-container">
+  <!-- <div class="search-container">
     <div class="search-input">
       <input placeholder="Buscar..." type="search">
       <a href=""><i class="fas fa-search"></i></a>
     </div>
-  </div>
+  </div> -->
   <script src="index.js"></script>
 </body>
 
