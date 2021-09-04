@@ -40,6 +40,7 @@ body::-webkit-scrollbar-thumb {
 .body{
   width: 100%;
   max-width: 1400px;
+  min-width: 300px;
   margin:0 auto;
   display: flex;
   justify-content: center;
@@ -68,8 +69,10 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  border-bottom: 5px solid #000;
   padding: 20px;
+}
+.main #section1 .container .title{
+  color: #ff0000;
 }
 .main #section1 .c{
   flex-direction: column;
@@ -79,11 +82,10 @@ body::-webkit-scrollbar-thumb {
   gap: 20px;
   font-weight: bold;
   font-size: 30px;
-  color: #ff0000;
+  color: #000;
 }
 .main #section1 .c .text{
-  font-weight: normal;
+  font-weight: bold;
   font-size: 12px;
-  font-style: oblique;
-  color: #000;
+  color: #111;
 }
