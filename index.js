@@ -27,4 +27,5 @@ function countdown(){
   $span[6].innerHTML = minutes // new Year
   $span[7].innerHTML = seconds // new Year
 }
+countdown()
 setInterval(countdown, 1000);
