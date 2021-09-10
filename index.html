@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="assets/js.png" type="image/x-icon">
   <title>Curso de JS</title>
+  <link href="hamburgers.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="index.css">
@@ -19,8 +20,9 @@
       <h2 class="subtitle">Ejercicios</h2>
     </section>
     <section id="section1">
+      <h2 class="title">Countdown</h2>
       <div class="countdown container">
-        <h2 class="title">Navidad</h2>
+        <h2 class="title">Navidad:</h2>
         <div class="dias c">
           <span class="time">0</span>
           <span class="text">Dias</span>
@@ -40,7 +42,7 @@
       </div>
       <br>
       <div class="countdown container">
-        <h2 class="title">New Year</h2>
+        <h2 class="title">New Year:</h2>
         <div class="c">
           <span class="time">0</span>
           <span class="text">Dias</span>
@@ -60,59 +62,51 @@
       </div>
     </section>
     <section id="section2">
-      <h2 class="title">Seccion 2</h2>
+      <h2 class="title">StopWatch</h2>
+      <div class="watch">
+        <div class="mins">0</div>
+        <div class="secs">0</div>
+        <div class="ms">0</div>
+      </div>
+      <div class="buttons">
+        <button class="play">Play</button>
+        <button class="pause">Pause</button>
+        <button class="restart">Restart</button>
+      </div>
     </section>
     <section id="section3">
-      <h2 class="title">Seccion 3</h2>
+      <h2 class="title">Menu Hamburguesa</h2>
+      <button id="btn-menu" class="btn-menu hamburger hamburger--elastic" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div id="menu" class="container menu">
+        <a class="menu-item" href="#">Menu item 1</a>
+        <a class="menu-item" href="#">Menu item 2</a>
+        <a class="menu-item" href="#">Menu item 3</a>
+        <a class="menu-item" href="#">Menu item 4</a>
+        <a class="menu-item" href="#">Menu item 5</a>
+      </div>
     </section>
     <section id="section4">
-      <h2 class="title">Seccion 4</h2>
+      <h2 class="title">Reloj digital y alarma</h2>
+      <div class="buttons">
+        <button id="initClock">Iniciar Reloj</button>
+        <button id="stopClock" disabled="true">Detener Reloj</button>
+        <button id="initAlarma">Iniciar Alarma</button>
+        <button id="stopAlarma" disabled="true">Detener Alarma</button>
+      </div>
+      <div class="reloj"></div>
+      <figure class="alarma">
+        <img src="https://cdn-icons-png.flaticon.com/512/727/727269.png" alt="bocina" width="100px">
+      </figure>
     </section>
-    <section id="section5">
-      <h2 class="title">Seccion 5</h2>
-    </section>
-    <section id="section6">
-      <h2 class="title">Seccion 6</h2>
-    </section>
-    <section id="section7">
-      <h2 class="title">Seccion 7</h2>
-    </section>
-    <section id="section8">
-      <h2 class="title">Seccion 8</h2>
-    </section>
-    <section id="section9">
-      <h2 class="title">Seccion 9</h2>
-    </section>
-    <section id="section10">
-      <h2 class="title">Seccion 10</h2>
-    </section>
-    <section id="section11">
-      <h2 class="title">Seccion 11</h2>
-    </section>
-    <section id="section12">
-      <h2 class="title">Seccion 12</h2>
-    </section>
-    <section id="section13">
-      <h2 class="title">Seccion 13</h2>
-    </section>
-    <section id="section14">
-      <h2 class="title">Seccion 14</h2>
-    </section>
-    <section id="section15">
-      <h2 class="title">Seccion 15</h2>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="copy" href="#"><i class="far fa-copyright"></i>all rights reserved <a href="#"><strong>Carlos
-          Sosa</strong></a></div>
-    <div class="social-media">
-      <a target="blank" href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
-      <a target="blank" href="https://www.github.com/carlosupreme"><i class="fab fa-github"></i></a>
-      <a target="blank" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-      <a target="blank" href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
-    </div>
-  </footer>
-  <script src="index.js"></script>
+    <section id="section5"></section>
+    <section id="section6"></section>
+    <section id="section7"></section>
+    <section id="section8"></section>
+  <script type="module" src="js/index.js"></script>
 </body>
 
 </html>
