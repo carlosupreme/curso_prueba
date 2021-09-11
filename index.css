@@ -1,25 +1,27 @@
 html.dark {
-  --main-color: #00eeff;
-  --title: #eff3f5;
-  --content: #c8cdd0;
-  --light: #a0a7ac;
-  --border-color: #2a3b47;
-  --container: #212e36;
-  --header: #23232e;
-  --body: #192229;
-  --white: #f0f0f0;
+  --main: #FFEE00;
+  --header: #202020;
+  --body: #181818;
+  --section: #212121;
+  --border: #303030;
+  --hover-item-active: #707070;
+  --hover-item: #272727;
+  --title: #ffffff;
+  --subtitle: #aaaaaa;
+  --black: #121212;
   scroll-behavior: smooth;
 }
 html {
-  --main-color: #ffe313;
-  --title: #2a3b47;
-  --content: #697477;
-  --light: #a0a7ac;
-  --border-color: #eff3f5;
-  --container: #ffffff;
-  --body: #fbfbfe;
-  --header: #23232e;
-  --white: #f0f0f0;
+  --main: #FFEE00;
+  --header: #ffffff;
+  --body: #F9F9F9;
+  --section: #ffffff;
+  --border: #E0E0E0;
+  --hover-item-active: #d9d9d9;
+  --hover-item: #e5e5e5;
+  --title: #030303;
+  --subtitle: #606060;
+  --black: #121212;
   scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
@@ -46,6 +48,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: var(--body);
 }
 .body .main {
   display: flex;
@@ -57,6 +60,16 @@ body::-webkit-scrollbar-thumb {
 }
 .body .main .home {
   text-align: center;
+}
+/* generals */
+.main .section {
+  background-color: var(--section);
+}
+.main section .title {
+  color: var(--title);
+}
+.main section .subtitle{
+  color: var(--subtitle);
 }
 .main #section1 {
   display: flex;
@@ -72,9 +85,6 @@ body::-webkit-scrollbar-thumb {
   gap: 20px;
   padding: 20px;
 }
-.main #section1 .container .title {
-  color: #ff0000;
-}
 .main #section1 .c {
   flex-direction: column;
   display: flex;
@@ -83,12 +93,12 @@ body::-webkit-scrollbar-thumb {
   gap: 20px;
   font-weight: bold;
   font-size: 30px;
-  color: #000;
+  color: var(--subtitle);
 }
 .main #section1 .c .text {
   font-weight: bold;
   font-size: 12px;
-  color: #111;
+  color: var(--subtitle);
 }
 .main #section2 {
   display: flex;
@@ -117,6 +127,7 @@ body::-webkit-scrollbar-thumb {
 #section2 .buttons button {
   padding: 5px;
   cursor: pointer;
+  color: var(--title);
 }
 /* ----- SECTION 3 MENU HAMBURGUESA ----- */
 
@@ -133,7 +144,7 @@ body::-webkit-scrollbar-thumb {
   right: 0;
   width: 100vw;
   height: 100vh;
-  background: #222;
+  background:var(--section);
   transform: translate(100%);
   transition: transform 0.4s;
 }
@@ -141,14 +152,14 @@ body::-webkit-scrollbar-thumb {
   transform: translate(0);
 }
 #menu .menu-item{
+  display: inline-block;
   text-decoration: none;
-  color: #000;
+  color: var(--title);
   padding:3px;
-  border-bottom: 2px solid #222;
+  border-bottom: 2px solid var(--border);
 }
 #menu .menu-item:hover{
-  color: blue;
-  border-color: blue;
+  background-color: var(--hover-item-active);
 }
 #btn-menu{
   position: fixed;
@@ -166,7 +177,7 @@ body::-webkit-scrollbar-thumb {
   gap: 30px;
 }
 #section4 .reloj.activo {
-  border:2px solid #222;
+  border:2px solid var(--border);
   padding: 10px;
 }
 #section4 .alarma{
@@ -176,4 +187,24 @@ body::-webkit-scrollbar-thumb {
 }
 #section4 .alarma.activo{
   transform: translate(0);
+}
+/* DARK MODE BTN */
+.darkMode{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--section);
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 100px;
+  font-size: 25px;
+  color: var(--main);
+  cursor: pointer;
+}
+.darkMode:hover{
+  color: #d1c843;
 }

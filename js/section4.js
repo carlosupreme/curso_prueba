@@ -12,8 +12,9 @@ export default function activarReloj(
  audioTag = d.createElement('audio')
  audioTag.setAttribute("src", sonido);
   d.addEventListener("click", (e) => {
+    
     if (e.target.matches(initReloj)) {
-      d.querySelector(reloj).classList.add("activo");
+      d.querySelector(reloj).classList.add("activo","title");
       d.querySelector(initReloj).setAttribute("disabled", "true");
       d.querySelector(stopReloj).removeAttribute("disabled");
 

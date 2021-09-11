@@ -1,3 +1,4 @@
+import darkmode from "./darkmode.js";
 import countdown from "./section1.js";
 import deployMenu from "./section3.js"
 import activarReloj from "./section4.js";
@@ -10,4 +11,6 @@ document.addEventListener('DOMContentLoaded',(e)=>{
   deployMenu("#btn-menu","#menu","#menu .menu-item")
   // SECCION 4 RELJ Y ALARMA
   activarReloj("#section4 .reloj","#initClock","#stopClock",".alarma","#initAlarma","#stopAlarma","./assets/Despertador.mp3")
+  // dark mode
+  darkmode('.darkMode','html')
 })
