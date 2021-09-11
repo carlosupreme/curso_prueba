@@ -69,19 +69,17 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--section);
   width: 90%;
   padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
 }
 .main .section .title {
   color: var(--title);
 }
 .main .section .subtitle {
   color: var(--subtitle);
-}
-.main #section1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
 }
 .main #section1 .container {
   display: flex;
@@ -104,13 +102,6 @@ body::-webkit-scrollbar-thumb {
   font-weight: bold;
   font-size: 12px;
   color: var(--subtitle);
-}
-.main #section2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
 }
 .main #section2 .watch {
   display: flex;
@@ -138,16 +129,12 @@ body::-webkit-scrollbar-thumb {
   color: var(--title);
 }
 /* ----- SECTION 3 MENU HAMBURGUESA ----- */
-
-#section3,
 #menu {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 20px;
-}
-#menu {
   position: fixed;
   top: 0;
   right: 0;
@@ -181,13 +168,6 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--section);
 }
 /* section 4 reloj y alarma */
-#section4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
-}
 #section4 .reloj.activo {
   border: 2px solid var(--border);
   padding: 10px;
@@ -236,6 +216,30 @@ body::-webkit-scrollbar-thumb {
 .darkMode:hover {
   color: #d1c843;
 }
+/* move the ball styling */
+#section5 .canvas{
+  min-width: 300px;
+  width: 80%;
+  min-height: 300px;
+  height: 50vh;
+  padding: 10px;
+  background-color: var(--title);
+}
+.ball{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: var(--main);
+  border-radius: 50%;
+  transition: transform 0.15s;
+}
+
+
+
+
+
+
+
 /* HAMBURGER BUTTON */
 .hamburger {
   padding: 15px 15px;
