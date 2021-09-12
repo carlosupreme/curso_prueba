@@ -39,14 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
     "#stopAlarma",
     "./assets/Despertador.mp3"
   );
-  // dark mode
-  darkmode(".darkMode", "html", "dark");
-  // SECCION 5 move the ball
-  document.addEventListener("keydown", (e) => {
-    moveBall(e, ".canvas .ball", ".canvas", ".canvas-apple", ".title.main");
-  });
-  // section 6 scroll up  btn
-  window.addEventListener('scroll',e=>{
-    scrollUp('#section6 .scroll-top',"show")
-  })
 });
+// dark mode
+darkmode(".darkMode", "html", "dark");
+// SECCION 5 move the ball
+document.addEventListener("keydown", (e) => {
+  moveBall(e, ".canvas .ball", ".canvas", ".canvas-apple", ".title.main");
+});
+// section 6 scroll up  btn
+window.addEventListener('scroll',e=>{
+  scrollUp('#section6 .scroll-top',"show")
+})

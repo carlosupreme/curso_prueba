@@ -58,10 +58,22 @@ export default function moveBall(e, ball, canva, final, msj) {
   if (e.key === "d" && e.ctrlKey) {
     e.preventDefault();
     document.querySelector("html").classList.toggle("dark");
+    localStorage.setItem(
+      "dark-theme",
+      `${
+        document.querySelector("html").classList.contains("dark")
+          ? "true"
+          : "false"
+      }`
+    );
   }
   if (e.key === "m" && e.ctrlKey) {
     e.preventDefault();
-    document.querySelector('#btn-menu').classList.toggle('is-active');
-    document.querySelector('#menu').classList.toggle('is-active');
+    document.querySelector("#btn-menu").classList.toggle("is-active");
+    document.querySelector("#menu").classList.toggle("is-active");
+  }
+  if (e.key === "h" && e.ctrlKey) {
+    e.preventDefault();
+    window.scrollTo(0, 0);
   }
 }
