@@ -4,9 +4,20 @@ import deployMenu from "./menu_hamburguesa.js";
 import activarReloj from "./clock_alarm.js";
 import stopWatch from "./stop_watch.js";
 import moveBall from "./move_ball.js";
-document.addEventListener("DOMContentLoaded", (e) => {
+import scrollUp from "./scroll_top.js";
+
+document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
-  countdown();
+  countdown(
+    "#section1 .container-countdown",
+    "30 oct 2021, 06:00:00",
+    "Happy Birthday"
+  );
+  countdown(
+    "#section1 .container-countdown2",
+    "25 dec 2021, 00:00:00",
+    "Happy Holidays!!"
+  );
   // SECTION 2
   stopWatch(
     ".watch .ms",
@@ -31,8 +42,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
   // dark mode
   darkmode(".darkMode", "html", "dark");
   // SECCION 5 move the ball
-});
-
-document.addEventListener("keydown", (e) => {
-  moveBall(e,".ball",".canvas")
+  document.addEventListener("keydown", (e) => {
+    moveBall(e, ".canvas .ball", ".canvas", ".canvas-apple", ".title.main");
+  });
+  // section 6 scroll up  btn
+  window.addEventListener('scroll',e=>{
+    scrollUp('#section6 .scroll-top',"show")
+  })
 });

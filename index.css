@@ -67,6 +67,7 @@ body::-webkit-scrollbar-thumb {
 /* generals */
 .main .section {
   background-color: var(--section);
+  margin: 0 auto;
   width: 90%;
   padding: 20px 0;
   display: flex;
@@ -77,6 +78,11 @@ body::-webkit-scrollbar-thumb {
 }
 .main .section .title {
   color: var(--title);
+  text-align: center;
+}
+.main .section .title.first {
+  font-size: 35px;
+  text-decoration: underline;
 }
 .main .section .subtitle {
   color: var(--subtitle);
@@ -143,6 +149,7 @@ body::-webkit-scrollbar-thumb {
   background: var(--section);
   transform: translate(100%);
   transition: transform 0.4s;
+  z-index: 1;
 }
 #menu.is-active {
   transform: translate(0);
@@ -224,6 +231,25 @@ body::-webkit-scrollbar-thumb {
   height: 50vh;
   padding: 10px;
   background-color: var(--title);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.canvas-apple{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--title);
+  margin-right: 50px;
+}
+.canvas-apple .apple{
+  width: 25px;
+  height: 25px;
+  display: block;
+  background-color: #ff0000;
+  border-radius: 50%;
 }
 .ball{
   width: 50px;
@@ -231,9 +257,52 @@ body::-webkit-scrollbar-thumb {
   display: inline-block;
   background-color: var(--main);
   border-radius: 50%;
-  transition: transform 0.15s;
+  transition: transform 0.15s, background 0.4s, border-radius 0.5s;
+  align-self: flex-start;
 }
-
+.ball.color{
+  background-color: rgb(100, 149, 237);
+}
+.ball.border{
+  border-radius: 0;
+}
+.ball.winner{
+  background-color: #ff0000;
+  width: 70px;
+  height: 70px;
+}
+#section5 .title.main{
+  display: none;
+  font-size: 35px;
+  text-shadow: 1px 5px 5px var(--main);
+}
+#section6 .scroll-top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: var(--section);
+  border: 2px solid var(--border);
+  cursor: pointer;
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+#section6 .scroll-top.show{
+  visibility: visible;
+  opacity: 1;
+}
+#section6 .scroll-top:hover i{
+  color: var(--main);
+}
+.scroll-top i{
+  font-size: 25px;
+  color: var(--title);
+}
 
 
 
