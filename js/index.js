@@ -5,6 +5,7 @@ import activarReloj from "./clock_alarm.js";
 import stopWatch from "./stop_watch.js";
 import moveBall from "./move_ball.js";
 import scrollUp from "./scroll_top.js";
+import responsive from "./responsive.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
@@ -39,6 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "#stopAlarma",
     "./assets/Despertador.mp3"
   );
+  // responsive
+  responsive("video","(max-width: 800px)",`<a class="title" href="https://www.youtube.com/watch?v=KvCUCkQ4tUs"> Ver video en Youtube 😊</a>`,`<iframe width="560" height="315" src="https://www.youtube.com/embed/KvCUCkQ4tUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
+  responsive("pinterest","(max-width: 400px)",`<a class="title" href="https://www.pinterest.com.mx/pin/116741815331059678/"> Ver video en Pinterest 😊</a>`,`<iframe src="https://assets.pinterest.com/ext/embed.html?id=116741815331059678" height="520" width="236" frameborder="0" scrolling="no" ></iframe>`)
 });
 // dark mode
 darkmode(".darkMode", "html", "dark");
