@@ -87,6 +87,9 @@ body::-webkit-scrollbar-thumb {
 .main .section .subtitle {
   color: var(--subtitle);
 }
+.main .section .text-main {
+  color: var(--main);
+}
 .main #section1 .container {
   display: flex;
   justify-content: center;
@@ -224,34 +227,34 @@ body::-webkit-scrollbar-thumb {
   color: #d1c843;
 }
 /* move the ball styling */
-#section5 .canvas{
+#section5 .canvas {
   min-width: 300px;
   width: 80%;
   min-height: 300px;
   height: 50vh;
   padding: 10px;
-  background-color: var(--title);
+  background-color: var(--subtitle);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.canvas-apple{
+.canvas-apple {
   width: 50px;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--title);
+  background-color: inherit;
   margin-right: 50px;
 }
-.canvas-apple .apple{
+.canvas-apple .apple {
   width: 25px;
   height: 25px;
   display: block;
   background-color: #ff0000;
   border-radius: 50%;
 }
-.ball{
+.ball {
   width: 50px;
   height: 50px;
   display: inline-block;
@@ -260,23 +263,23 @@ body::-webkit-scrollbar-thumb {
   transition: transform 0.15s, background 0.4s, border-radius 0.5s;
   align-self: flex-start;
 }
-.ball.color{
+.ball.color {
   background-color: rgb(100, 149, 237);
 }
-.ball.border{
+.ball.border {
   border-radius: 0;
 }
-.ball.winner{
+.ball.winner {
   background-color: #ff0000;
   width: 70px;
   height: 70px;
 }
-#section5 .title.main{
+#section5 .title.main {
   display: none;
   font-size: 35px;
   text-shadow: 1px 5px 5px var(--main);
 }
-#section6 .scroll-top{
+#section6 .scroll-top {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -292,23 +295,52 @@ body::-webkit-scrollbar-thumb {
   opacity: 0;
   transition: all 0.5s;
 }
-#section6 .scroll-top.show{
+#section6 .scroll-top.show {
   visibility: visible;
   opacity: 1;
 }
-#section6 .scroll-top:hover i{
+#section6 .scroll-top:hover i {
   color: var(--main);
 }
-.scroll-top i{
+.scroll-top i {
   font-size: 25px;
   color: var(--title);
 }
-
-
-
-
-
-
+/*  form responsive tester */
+#section8 form {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+#section8 form fieldset{
+  border: 3px dotted var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--header);
+  padding: 15px 10px;
+}
+#section8 form fieldset:nth-child(4){
+  border: none;
+  padding: 0;
+  background: none;
+}
+#section8 form fieldset:nth-child(4) input{
+  cursor: pointer;
+  color: var(--title);
+  background-color: var(--header);
+  border: 2px dotted var(--border);
+  padding: 10px;
+}
+#section8 form fieldset:nth-child(4) input:hover{
+  color: var(--main);
+  border-width: 3px;
+}
 /* HAMBURGER BUTTON */
 .hamburger {
   padding: 15px 15px;
