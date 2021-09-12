@@ -6,6 +6,7 @@ import stopWatch from "./stop_watch.js";
 import moveBall from "./move_ball.js";
 import scrollUp from "./scroll_top.js";
 import responsive, { responsiveTester } from "./responsive.js";
+import userDevice from "./deteccion_dispositivo.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
@@ -54,6 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
     `<iframe src="https://assets.pinterest.com/ext/embed.html?id=116741815331059678" height="520" width="236" frameborder="0" scrolling="no" ></iframe>`
   )
   responsiveTester("responsive-form")
+  // user agente
+  userDevice('user-device',"first title", "text-main",10000)
 });
 // dark mode
 darkmode(".darkMode", "html", "dark");

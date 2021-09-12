@@ -84,6 +84,9 @@ body::-webkit-scrollbar-thumb {
   font-size: 35px;
   text-decoration: underline;
 }
+.main .section .first{
+  font-size: 1.5rem;
+}
 .main .section .subtitle {
   color: var(--subtitle);
 }
@@ -341,6 +344,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--main);
   border-width: 3px;
 }
+/* user agent */
 /* HAMBURGER BUTTON */
 .hamburger {
   padding: 15px 15px;
