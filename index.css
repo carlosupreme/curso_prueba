@@ -303,10 +303,10 @@ body::-webkit-scrollbar-thumb {
   visibility: visible;
   opacity: 1;
 }
-#section6 .scroll-top:hover i {
+#section6 .scroll-top:hover i, #section14 .reload:hover {
   color: var(--main);
 }
-.scroll-top i {
+.scroll-top i, #section14 .reload {
   font-size: 25px;
   color: var(--title);
 }
@@ -371,8 +371,23 @@ body::-webkit-scrollbar-thumb {
 #containerWeb {
   width: 90%;
 }
-/* geolocalizacion */
-
+/* filtros */
+/* reload btn */
+.section .reload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: var(--section);
+  border: 2px solid var(--border);
+  cursor: pointer;
+  position: fixed;
+  left: 120px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+}
 
 
 

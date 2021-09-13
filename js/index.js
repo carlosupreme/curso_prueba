@@ -10,6 +10,7 @@ import userDevice from "./deteccion_dispositivo.js";
 import connection from "./connection.js";
 import getCamara from "./web_cam.js";
 import getLocation from "./geolocation.js";
+import refreshPage from "./reload-btn.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
@@ -64,6 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
   getCamara("containerWeb",'.errorWebcam')
   // obteniendo geolocalizacion
   getLocation("geo-container")
+  // refresh page
+  refreshPage('refresh')
   // TERMINA DOMContentLoaded
 });
 // dark mode
