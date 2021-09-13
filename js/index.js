@@ -8,6 +8,7 @@ import scrollUp from "./scroll_top.js";
 import responsive, { responsiveTester } from "./responsive.js";
 import userDevice from "./deteccion_dispositivo.js";
 import connection from "./connection.js";
+import getCamara from "./web_cam.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
@@ -58,6 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
   responsiveTester("responsive-form")
   // user agent deteccion de dispositivo
   userDevice('user-device',"first title", "text-main")
+  // obteniendo camara web
+  getCamara("containerWeb",'.errorWebcam')
+  // TERMINA DOMContentLoaded
 });
 // dark mode
 darkmode(".darkMode", "html", "dark");
