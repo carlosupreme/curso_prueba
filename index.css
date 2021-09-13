@@ -80,12 +80,10 @@ body::-webkit-scrollbar-thumb {
   color: var(--title);
   text-align: center;
 }
-.main .section .title.first {
-  font-size: 35px;
-  text-decoration: underline;
-}
 .main .section .first {
   font-size: 1.5rem;
+  border-bottom: 2px;
+  border-bottom: 5px solid var(--border);
 }
 .main .section .subtitle {
   color: var(--subtitle);
@@ -156,6 +154,7 @@ body::-webkit-scrollbar-thumb {
   transform: translate(100%);
   transition: transform 0.4s;
   z-index: 1;
+  overflow-y: auto;
 }
 #menu.is-active {
   transform: translate(0);
@@ -355,7 +354,8 @@ body::-webkit-scrollbar-thumb {
   top: 0;
   left:0;
   width: 100vw;
-  height: 100px;
+  height: max-content;
+  padding: 10px;
   color:var(--title);
   font-size: 2em;
 }
@@ -367,6 +367,21 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   background-color: #ff0000;
 }
+/* webcam styling */
+#containerWeb {
+  width: 90%;
+}
+/* geolocalizacion */
+
+
+
+
+
+
+
+
+
+
 /* HAMBURGER BUTTON */
 .hamburger {
   padding: 15px 15px;

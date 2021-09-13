@@ -8,10 +8,10 @@ export default function getCamara(container, error) {
       .then((stream) => {
         $video.srcObject = stream;
         setTimeout(() => {
-          $message.innerHTML = `OMG you so ugly 🤮🤮🤮🤮🤮`;
+          $message.innerHTML = `👀👀...U look great 👌`;
           $message.style.display = "block";
           $message.classList.add("title");
-        }, 3000);
+        }, 10000);
         // $video.play() -------> tambien puede ser, pero use autoplay en HTML
       })
       .catch((err) => {

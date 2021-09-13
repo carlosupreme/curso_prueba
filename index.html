@@ -62,6 +62,7 @@
         <a class="menu-item title" href="#section9">User Agent</a>
         <a class="menu-item title" href="#section10">Estado de red</a>
         <a class="menu-item title" href="#section11">Camara Web</a>
+        <a class="menu-item title" href="#section12">Geolocalizacion</a>
       </div>
     </section>
     <section class="section" id="section4">
@@ -135,14 +136,21 @@
     </section>
     <section class="section" id="section10">
       <h2 class="title first">Conexion</h2>
-      <div id="conection0" class="conection">Recuperación de conexión</div>
-      <div id="conection1" class="conection">Perdida de conexión</div>
+      <div id="conection0" class="conection">Se ha recuperado la conexión</div>
+      <div id="conection1" class="conection">Se ha perdido la conexión</div>
     </section>
     <section class="section" id="section11">
       <h2 class="title first">Tu camara web 😱</h2>
       <video id="containerWeb" autoplay></video>
-      <div style="display: none;" class="errorWebcam"><h2 class="title">No tienes WebCam? ☹</h2></div>
+      <h2 style="display: none;" class="errorWebcam title">No tienes WebCam? ☹</h2>
     </section>
+    <section class="section" id="section12">
+      <h2 class="title first">Tu geolocalización 🌎</h2>
+      <div id="geo-container" class="section"></div>
+    </section>
+  </main>
+
+
   <script type="module" src="js/index.js"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@ import responsive, { responsiveTester } from "./responsive.js";
 import userDevice from "./deteccion_dispositivo.js";
 import connection from "./connection.js";
 import getCamara from "./web_cam.js";
+import getLocation from "./geolocation.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
@@ -61,6 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
   userDevice('user-device',"first title", "text-main")
   // obteniendo camara web
   getCamara("containerWeb",'.errorWebcam')
+  // obteniendo geolocalizacion
+  getLocation("geo-container")
   // TERMINA DOMContentLoaded
 });
 // dark mode
