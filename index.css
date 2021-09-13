@@ -372,6 +372,28 @@ body::-webkit-scrollbar-thumb {
   width: 90%;
 }
 /* filtros */
+.section .cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.cards .card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 4px dotted var(--border);
+}
+.cards .card figcaption{
+  color: var(--title);
+  font-weight: bold;
+}
+.cards .card.hidden{
+  display: none;
+}
 /* reload btn */
 .section .reload {
   display: flex;

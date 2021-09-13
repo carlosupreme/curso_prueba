@@ -11,6 +11,7 @@ import connection from "./connection.js";
 import getCamara from "./web_cam.js";
 import getLocation from "./geolocation.js";
 import refreshPage from "./reload-btn.js";
+import filtrar from "./filtros_busqueda.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
@@ -51,22 +52,24 @@ document.addEventListener("DOMContentLoaded", () => {
     "(max-width: 800px)",
     `<a class="title" href="https://www.youtube.com/watch?v=KvCUCkQ4tUs"> Ver video en Youtube 😊</a>`,
     `<iframe width="560" height="315" src="https://www.youtube.com/embed/KvCUCkQ4tUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-  )
+  );
   responsive(
     "pinterest",
     "(max-width: 400px)",
     `<a class="title" href="https://www.pinterest.com.mx/pin/116741815331059678/"> Ver video en Pinterest 😊</a>`,
     `<iframe src="https://assets.pinterest.com/ext/embed.html?id=116741815331059678" height="520" width="236" frameborder="0" scrolling="no" ></iframe>`
-  )
-  responsiveTester("responsive-form")
+  );
+  responsiveTester("responsive-form");
   // user agent deteccion de dispositivo
-  userDevice('user-device',"first title", "text-main")
+  userDevice("user-device", "first title", "text-main");
   // obteniendo camara web
-  getCamara("containerWeb",'.errorWebcam')
+  getCamara("containerWeb", ".errorWebcam");
   // obteniendo geolocalizacion
-  getLocation("geo-container")
+  getLocation("geo-container");
   // refresh page
-  refreshPage('refresh')
+  refreshPage("refresh");
+  // filtros de busqueda
+  filtrar(".card", "#filtrar","hidden");
   // TERMINA DOMContentLoaded
 });
 // dark mode
@@ -76,8 +79,8 @@ document.addEventListener("keydown", (e) => {
   moveBall(e, ".canvas .ball", ".canvas", ".canvas-apple", ".title.main");
 });
 // section 6 scroll up  btn
-window.addEventListener('scroll',e=>{
-  scrollUp('#section6 .scroll-top',"show")
-})
+window.addEventListener("scroll", (e) => {
+  scrollUp("#section6 .scroll-top", "show");
+});
 // deteccion de estado de red
-connection("conection0","conection1")
+connection("conection0", "conection1");
