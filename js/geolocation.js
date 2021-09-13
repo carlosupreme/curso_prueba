@@ -8,7 +8,7 @@ export default function getLocation(container) {
       const $mapLink = d.createElement("a"),
         latitud = position.coords.latitude,
         longitud = position.coords.longitude,
-        precision = position.coords.accuracy,
+        precision = Math.round(position.coords.accuracy),
         maps = [latitud, longitud].join();
       $container.innerHTML = `
       <ul class="section">
