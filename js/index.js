@@ -12,6 +12,7 @@ import getCamara from "./web_cam.js";
 import getLocation from "./geolocation.js";
 import refreshPage from "./reload-btn.js";
 import filtrar from "./filtros_busqueda.js";
+import sortear from "./sorteo.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
@@ -70,6 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
   refreshPage("refresh");
   // filtros de busqueda
   filtrar(".card", "#filtrar","hidden");
+  // sorteo
+  sortear(".player",".iniciar-sorteo",".reiniciar-sorteo","winner")
   // TERMINA DOMContentLoaded
 });
 // dark mode
