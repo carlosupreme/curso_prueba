@@ -386,13 +386,16 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   gap: 10px;
   border: 4px dotted var(--border);
+  transition: all 0.3s;
 }
 .cards .card figcaption{
   color: var(--title);
   font-weight: bold;
 }
 .cards .card.hidden{
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  order: 1;
 }
 /* reload btn */
 .section .reload {

@@ -8,5 +8,6 @@ export default function filtrar(elements, input, claseRemovedora) {
           : (el.classList.add(claseRemovedora))
       );
     }
+    if(e.key === "Escape") e.target.value = ''
   });
 }
