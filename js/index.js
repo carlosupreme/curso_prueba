@@ -7,6 +7,7 @@ import moveBall from "./move_ball.js";
 import scrollUp from "./scroll_top.js";
 import responsive, { responsiveTester } from "./responsive.js";
 import userDevice from "./deteccion_dispositivo.js";
+import connection from "./connection.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
@@ -55,8 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
     `<iframe src="https://assets.pinterest.com/ext/embed.html?id=116741815331059678" height="520" width="236" frameborder="0" scrolling="no" ></iframe>`
   )
   responsiveTester("responsive-form")
-  // user agente
-  userDevice('user-device',"first title", "text-main",10000)
+  // user agent deteccion de dispositivo
+  userDevice('user-device',"first title", "text-main")
 });
 // dark mode
 darkmode(".darkMode", "html", "dark");
@@ -68,3 +69,5 @@ document.addEventListener("keydown", (e) => {
 window.addEventListener('scroll',e=>{
   scrollUp('#section6 .scroll-top',"show")
 })
+// deteccion de estado de red
+connection("conection0","conection1")

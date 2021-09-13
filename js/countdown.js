@@ -20,4 +20,3 @@ export default function countdown(container, date, message) {
       }
     }, 1000);
 }
-const d =  document.querySelector('container')

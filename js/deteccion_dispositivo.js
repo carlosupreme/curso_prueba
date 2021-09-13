@@ -1,7 +1,8 @@
 const d = document,
-  w = window,
-  userA = navigator.userAgent;
-export default function userDevice(container, clase, clase2,tiempo) {
+w = window,
+userA = navigator.userAgent
+export default function userDevice(container, clase, clase2) {
+  let sBrowser
   clase = `"${clase}"`;
   const $container = d.getElementById(container),
     mobile = {
@@ -19,40 +20,24 @@ export default function userDevice(container, clase, clase2,tiempo) {
       any: function () {
         return this.linux() || this.windows() || this.mac();
       },
-    },
-    browser = {
-      chrome: () => userA.match(/chrome/i),
-      opera: () => userA.match(/opera|opr/i),
-      firefox: () => userA.match(/firefox/i),
-      edge: () => userA.match(/edge/i),
-      safari: () => userA.match(/safari/i),
-      ie: () => userA.match(/msie|iemobile/i),
-      any: function () {
-        return (
-          this.chrome() ||
-          this.opera() ||
-          this.firefox() ||
-          this.edge() ||
-          this.safari() ||
-          this.ie()
-        );
-      },
-    };
+    }
 
   $container.innerHTML = `
-  <h4 style="text-decoration: none;" class=${clase}>Tienes un dispositivo:<span class="${clase2}"> ${
-    mobile.any() ? `${mobile.any()} 📱` : `${desktop.any()} 💻`
-  }</span></h4>
-  <h4 style="text-decoration: none;" class=${clase}>Estás usando un navegador basado en:<span class="${clase2}"> ${browser.any()}</span></h4>`;
+  <h4 style="text-decoration: none;" class=${clase}>Tienes un dispositivo:<span class="${clase2}"> 
+  ${
+    mobile.any() 
+    ? `${mobile.any()} 📱` 
+    : `${desktop.any()} 💻`
+  }
+  </span></h4>`
 
   // contenido exclusivo
   if (mobile.android()) {
     $container.innerHTML += `
     <h4 style="text-decoration: none;" class=${clase}> Este texto solo se ve en ${mobile.android()}</h4>`;
-    setTimeout(()=>{
-      // w.location.href = "https://github.com/carlosupreme"
-      alert(`Vas a ser redirigido a la pagina especial para ${mobile.android()}`)
-    },tiempo)
+    // redireccion asi:
+    // alert(`Vas a ser redirigido a la pagina especial para ${mobile.android()}`)
+    // w.location.href = "https://github.com/carlosupreme"
   }
   if (mobile.iOs()) {
     $container.innerHTML += `
@@ -73,16 +58,14 @@ export default function userDevice(container, clase, clase2,tiempo) {
     $container.innerHTML += `<h4 style="text-decoration: none;" class=${clase}> Este texto solo se ve en ${desktop.mac()}</h4>`;
   }
   // browser
-  if (browser.chrome()) {
-    $container.innerHTML += `<h4 style="text-decoration: none;" class=${clase}> Este texto solo se ve en ${browser.chrome()}</h4>`;
-  }
-  if (browser.opera()) {
-    $container.innerHTML += `<h4 style="text-decoration: none;" class=${clase}> Este texto solo se ve en ${browser.opera()}</h4>`;
-  }
-  if (browser.safari()) {
-    $container.innerHTML += `<h4 style="text-decoration: none;" class=${clase}> Este texto solo se ve en ${browser.safari()}</h4>`;
-  }
-  if (browser.edge()) {
-    $container.innerHTML += `<h4 style="text-decoration: none;" class=${clase}> Este texto solo se ve en ${browser.edge()}</h4>`;
-  }
+  if (userA.indexOf("Firefox") > -1) sBrowser = "Mozilla Firefox";
+  else if (userA.indexOf("SamsungBrowser") > -1) sBrowser = "Samsung Internet";
+  else if (userA.indexOf("Opera") > -1 || userA.indexOf("OPR") > -1) sBrowser = "Opera";
+  else if (userA.indexOf("Trident") > -1) sBrowser = "Microsoft Internet Explorer";
+  else if (userA.indexOf("Edge") > -1) sBrowser = "Microsoft Edge (Legacy)";
+  else if (userA.indexOf("Edg") > -1) sBrowser = "Microsoft Edge (Chromium)";
+  else if (userA.indexOf("Chrome") > -1) sBrowser = "Google Chrome o Chromium";
+  else if (userA.indexOf("Safari") > -1) sBrowser = "Apple Safari";
+  else sBrowser = `Ohh parece que tu navegador no lo conozco ☹`;
+  $container.innerHTML += `<h4 style="text-decoration: none;" class=${clase}>Estás usando un navegador basado en:<span class="${clase2}"> ${sBrowser}</span></h4>`;
 }

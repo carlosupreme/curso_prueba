@@ -84,7 +84,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 35px;
   text-decoration: underline;
 }
-.main .section .first{
+.main .section .first {
   font-size: 1.5rem;
 }
 .main .section .subtitle {
@@ -198,12 +198,14 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   gap: 20px;
 }
+
 .buttons .title:disabled {
   color: var(--subtitle);
   text-decoration: line-through;
   cursor: default;
 }
-.buttons .title {
+.buttons .title,
+.button {
   background-color: var(--header);
   padding: 10px;
   border: 2px dotted var(--border);
@@ -319,7 +321,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   gap: 30px;
 }
-#section8 form fieldset{
+#section8 form fieldset {
   border: 3px dotted var(--border);
   display: flex;
   justify-content: center;
@@ -328,23 +330,43 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--header);
   padding: 15px 10px;
 }
-#section8 form fieldset:nth-child(4){
+#section8 form fieldset:nth-child(4) {
   border: none;
   padding: 0;
   background: none;
 }
-#section8 form fieldset:nth-child(4) input{
+#section8 form fieldset:nth-child(4) input {
   cursor: pointer;
   color: var(--title);
   background-color: var(--header);
   border: 2px dotted var(--border);
   padding: 10px;
 }
-#section8 form fieldset:nth-child(4) input:hover{
+#section8 form fieldset:nth-child(4) input:hover {
   color: var(--main);
   border-width: 3px;
 }
-/* user agent */
+/* conection */
+.conection {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100vw;
+  height: 100px;
+  color:var(--title);
+  font-size: 2em;
+}
+.conection.online{
+  display: flex;
+  background-color: #32cd32;
+}
+.conection.offline{
+  display: flex;
+  background-color: #ff0000;
+}
 /* HAMBURGER BUTTON */
 .hamburger {
   padding: 15px 15px;
