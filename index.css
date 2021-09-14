@@ -428,7 +428,7 @@ body::-webkit-scrollbar-thumb {
   transition: background 0.5s;
 }
 .player.winner{
-  background-color: var(--main);
+  background-color: #ff0000;
 }
 
 

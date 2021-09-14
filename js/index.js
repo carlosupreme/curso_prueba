@@ -13,6 +13,7 @@ import getLocation from "./geolocation.js";
 import refreshPage from "./reload-btn.js";
 import filtrar from "./filtros_busqueda.js";
 import sortear from "./sorteo.js";
+import consolaCSS from "./consola-message.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
@@ -87,3 +88,5 @@ window.addEventListener("scroll", (e) => {
 });
 // deteccion de estado de red
 connection("conection0", "conection1");
+// consola con estilos css
+consolaCSS()

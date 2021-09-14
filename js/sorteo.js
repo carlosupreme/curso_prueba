@@ -5,9 +5,9 @@ export default function sortear(players, start, reset,claseWinner){
   if(e.target.matches(start)){
    d.querySelector(start).setAttribute("disabled","true")
    d.querySelector(reset).removeAttribute("disabled")
-   const numeroGanador = Math.round(Math.random() * ($players.length - 1) + 1)
+   const numeroGanador = Math.floor(Math.random() * $players.length)
    setTimeout(()=>{
-    $players[numeroGanador -1].classList.add(claseWinner)
+    $players[numeroGanador].classList.add(claseWinner)
    },1000)
   }
 
@@ -16,7 +16,12 @@ export default function sortear(players, start, reset,claseWinner){
    d.querySelector(reset).setAttribute("disabled","true")
    d.querySelector(start).removeAttribute("disabled")
   }
-
+//---------tambien funciona asi ------
+  // function getWinner(container){
+  //  const players= document.querySelectorAll(container)
+  //  const ganador = Math.floor(Math.random() * players.length)
+  //  return `El ganador es: ${players[ganador].textContent}`
+  // }
 
 
 
