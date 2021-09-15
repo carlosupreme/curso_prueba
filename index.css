@@ -26,7 +26,7 @@ html {
 }
 body::-webkit-scrollbar {
   width: 1px;
-  height: 10px;
+  height: 0;
 }
 body::-webkit-scrollbar-track {
   background-color: var(--body);
@@ -228,6 +228,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 25px;
   color: var(--main);
   cursor: pointer;
+  z-index: 2;
 }
 .darkMode:hover {
   color: #d1c843;
@@ -300,6 +301,7 @@ body::-webkit-scrollbar-thumb {
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s;
+  z-index: 2;
 }
 #section6 .scroll-top.show {
   visibility: visible;
@@ -416,6 +418,7 @@ body::-webkit-scrollbar-thumb {
   bottom: 30px;
   width: 50px;
   height: 50px;
+  z-index: 2;
 }
 
 .players {
@@ -480,6 +483,7 @@ body::-webkit-scrollbar-thumb {
   margin: auto;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 #section17 .slider{ 
   height: 500px;
@@ -498,8 +502,8 @@ body::-webkit-scrollbar-thumb {
 #section17 .slider .slide *{ /*image*/
   border-radius: 10px;
   display: block;
-  width: 100%;
-  height: 100%;
+  width: inherit;
+  height: inherit;
   object-fit: cover;
 }
 /* slider buttons styling */
