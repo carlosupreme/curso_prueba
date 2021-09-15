@@ -25,14 +25,14 @@ html {
   scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
-  width: 1px;
+  width: 10px;
   height: 0;
 }
 body::-webkit-scrollbar-track {
-  background-color: var(--body);
+  background-color: var(--header);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: var(--main-color);
+  background-color: var(--main);
 }
 * {
   margin: 0;
@@ -158,6 +158,9 @@ body::-webkit-scrollbar-thumb {
   transition: transform 0.4s;
   z-index: 2;
   overflow-y: auto;
+}
+#menu::-webkit-scrollbar{
+  display: none;
 }
 #menu.is-active {
   transform: translate(0);
@@ -593,6 +596,20 @@ body::-webkit-scrollbar-thumb {
 }
 #section18 .slider-container .slider-buttons *:hover{
   color: #d1c843;
+}
+.video-interactivo{
+  width: 100%;
+  /* height: 85vh; */
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video-interactivo video{
+  width: 90%;
+  height: inherit;
+  object-fit: cover;
+  object-position: center;
 }
 /* HAMBURGER BUTTON */
 .hamburger {

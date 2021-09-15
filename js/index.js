@@ -16,6 +16,7 @@ import sortear from "./sorteo.js";
 import consolaCSS from "./consola-message.js";
 import slider, { sliderMarginLeft } from "./slider.js";
 import cambiarScroll from "./scroll_spy.js";
+import smartVideo from "./smart_video.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
@@ -89,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "#section18 .slider-autoplay"
   );
   cambiarScroll();
+  smartVideo();
   // TERMINA DOMContentLoaded
 });
 // dark mode
