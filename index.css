@@ -67,7 +67,7 @@ body::-webkit-scrollbar-thumb {
 /* generals */
 .main .section {
   max-width: inherit;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: var(--section);
   margin: 0 auto;
   width: 90%;
@@ -543,7 +543,57 @@ body::-webkit-scrollbar-thumb {
 #section17 .slider-container .slider-buttons *:hover{
   color: #d1c843;
 }
-
+/* slider JS 2.0 styling */
+#section18 .slider-container{
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+#section18 .slider{ 
+  height: 500px;
+  width: 500%;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  margin-left: -100%;
+}
+#section18 .slider .slide{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#section18 .slider .slide *{ /*image*/
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* slider buttons styling */
+#section18 .slider-container .slider-buttons{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+#section18 .slider-container .slider-buttons *{
+  color: var(--title);
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 20px;
+  border: 1px dashed var(--subtitle);
+  border-radius: 50%;
+  cursor: pointer;
+}
+#section18 .slider-container .slider-buttons *:hover{
+  color: #d1c843;
+}
 /* HAMBURGER BUTTON */
 .hamburger {
   padding: 15px 15px;

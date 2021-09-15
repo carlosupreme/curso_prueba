@@ -14,7 +14,8 @@ import refreshPage from "./reload-btn.js";
 import filtrar from "./filtros_busqueda.js";
 import sortear from "./sorteo.js";
 import consolaCSS from "./consola-message.js";
-import slider from "./slider.js";
+import slider, { sliderMarginLeft } from "./slider.js";
+import cambiarScroll from "./scroll_spy.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
@@ -81,6 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
     "#section17 .slider-buttons .left",
     "#section17 .slider-autoplay"
   );
+  sliderMarginLeft(
+    "#section18 .slider",
+    "#section18 .slider-buttons .right",
+    "#section18 .slider-buttons .left",
+    "#section18 .slider-autoplay"
+  );
+  cambiarScroll();
   // TERMINA DOMContentLoaded
 });
 // dark mode
