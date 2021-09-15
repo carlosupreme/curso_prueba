@@ -58,7 +58,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   gap: 100px;
   max-width: 1200px;
-  margin: 0 auto 100px;
+  margin: 10px auto 100px;
   width: 100%;
 }
 .body .main .home {
@@ -66,6 +66,8 @@ body::-webkit-scrollbar-thumb {
 }
 /* generals */
 .main .section {
+  max-width: inherit;
+  overflow: hidden;
   background-color: var(--section);
   margin: 0 auto;
   width: 90%;
@@ -154,7 +156,7 @@ body::-webkit-scrollbar-thumb {
   background: var(--section);
   transform: translate(100%);
   transition: transform 0.4s;
-  z-index: 1;
+  z-index: 2;
   overflow-y: auto;
 }
 #menu.is-active {
@@ -170,11 +172,16 @@ body::-webkit-scrollbar-thumb {
 #menu .menu-item:hover {
   background-color: var(--hover-item-active);
 }
+#menu .menu-item.is-active{
+  color: var(--main);
+  font-size: 1.3em;
+  font-weight: bold;
+}
 #btn-menu {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  z-index: 2;
+  z-index: 3;
   padding: 10px;
   border-radius: 50%;
   border: 1px solid var(--border);
@@ -491,6 +498,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   transition:  all 0.5s;
   position: relative;
+  z-index: 1;
 }
 #section17 .slider .slide{
   opacity: 0;
@@ -521,6 +529,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 }
 #section17 .slider-container .slider-buttons *{
   color: var(--title);
@@ -646,4 +655,25 @@ body::-webkit-scrollbar-thumb {
 .hamburger--elastic-r.is-active .hamburger-inner::after {
   transform: translate3d(0, -20px, 0) rotate(270deg);
   transition-delay: 0.075s;
+}
+
+@media(min-width:1524px){
+  .main{
+    position: absolute;
+    left: 0;
+    top:0;
+    overflow-y: auto;
+  }
+  #menu{
+    transform: translate(0);
+    width: 25vw;
+    padding: 80px 10px 0;
+  }
+  #btn-menu {
+    display: none;
+  }
+  .darkMode{
+    z-index: 3;
+    right: 26vw;
+  }
 }
