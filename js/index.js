@@ -14,6 +14,7 @@ import refreshPage from "./reload-btn.js";
 import filtrar from "./filtros_busqueda.js";
 import sortear from "./sorteo.js";
 import consolaCSS from "./consola-message.js";
+import slider from "./slider.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
@@ -74,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   filtrar(".card", "#filtrar","hidden");
   // sorteo
   sortear(".player",".iniciar-sorteo",".reiniciar-sorteo","winner")
+  slider("#section17 .slider","#section17 .slider-buttons .right","#section17 .slider-buttons .left")
   // TERMINA DOMContentLoaded
 });
 // dark mode
