@@ -490,14 +490,20 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   display: flex;
   transition:  all 0.5s;
+  position: relative;
 }
 #section17 .slider .slide{
-  display: none;
-}
-#section17 .slider .slide.is-active{
+  opacity: 0;
+  visibility: hidden;
   width: 100%;
   height: 100%;
+  transition: all 0.5s linear;
   display: block;
+  position: absolute;
+}
+#section17 .slider .slide.is-active{
+  opacity: 1;
+  visibility: visible;
 }
 #section17 .slider .slide *{ /*image*/
   border-radius: 10px;
