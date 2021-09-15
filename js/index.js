@@ -72,10 +72,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // refresh page
   refreshPage("refresh");
   // filtros de busqueda
-  filtrar(".card", "#filtrar","hidden");
+  filtrar(".card", "#filtrar", "hidden");
   // sorteo
-  sortear(".player",".iniciar-sorteo",".reiniciar-sorteo","winner")
-  slider("#section17 .slider","#section17 .slider-buttons .right","#section17 .slider-buttons .left")
+  sortear(".player", ".iniciar-sorteo", ".reiniciar-sorteo", "winner");
+  slider(
+    "#section17 .slider",
+    "#section17 .slider-buttons .right",
+    "#section17 .slider-buttons .left",
+    "#section17 .slider-autoplay"
+  );
   // TERMINA DOMContentLoaded
 });
 // dark mode
@@ -91,4 +96,4 @@ window.addEventListener("scroll", (e) => {
 // deteccion de estado de red
 connection("conection0", "conection1");
 // consola con estilos css
-consolaCSS()
+consolaCSS();
