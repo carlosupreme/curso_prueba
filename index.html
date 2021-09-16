@@ -70,7 +70,8 @@
         <a data-scroll class="menu-item title" href="#section17">Slider JS</a>
         <a data-scroll class="menu-item title" href="#section18">Slider JS con efecto</a>
         <a data-scroll class="menu-item title" href="#section19">Video interactivo</a>
-        <a data-scroll class="menu-item title" href="#section20">20</a>
+        <a data-scroll class="menu-item title" href="#section20">Validacion Formulario</a>
+        <a data-scroll class="menu-item title" href="#section21">Narrador de voz</a>
       </div>
     </section>
     <section class="section" data-scroll id="section4">
@@ -267,21 +268,35 @@
      </div>
    </section>
      <section class="section" data-scroll id="section20">
-       <h2 class="title first">Section20</h2>
-       <div>
-         <p style="font-size: 2em;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt perspiciatis mollitia inventore temporibus. Recusandae ducimus voluptatibus commodi accusamus quia quod nam dolore rerum libero consectetur assumenda possimus odio laborum neque quidem distinctio esse iusto aperiam excepturi repellat reprehenderit, nemo animi, ipsa nulla? Laboriosam voluptates esse cum provident dignissimos quaerat asperiores numquam exercitationem sint eaque, porro, quia repellendus cupiditate. Dolor, velit. Illum provident, officiis eum cumque consequuntur molestiae perspiciatis nostrum iusto cum veri.</p>
+       <h2 class="title first">Validación de formulario</h2>
+       <form id="validacionForm" target="_blank" action="https://formsubmit.co/carlos.alberto.sosa.perera@gmail.com" method="POST">
+        <input type="hidden" name="_autoresponse" value="Tu solicitud ha sido recibida, pronto recibirás noticias sobre el estatus de tu equipo 😃👍">
+         <input title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÁÉÍÓÚÜáéíóúüñÑ\s]+$" required type="text" placeholder="Escribe tu nombre" name="name">
+         <input title="Email invalido" pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|'(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*')@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])" required type="text" placeholder="Escribe tu email" name="email">
+         <input title="Numero solo acepta 10 numeros"  pattern="^[0-9]{10}$" required type="text" placeholder="Numero telefonico a 10 digitos" name="number">
+        <div class="password">
+          <input  title="Minimo 8 caracteres, y debe incluir un numero y una letra" pattern="^(?=.*[A-Za-zÁÉÍÓÚÜáéíóúüñÑ])(?=.*\d)[A-Za-zñÑ\d]{8,}$" required type="password" placeholder="Contraseña de 5-20 digitos" name="password">
+          <div class="toggle-password"></div>
         </div>
-        <div class="video-interactivo">
-          <video muted controls loop src="assets/shingekiVideo.mp4" data-video></video>
-        </div>
+        <input type="text" name="subject" placeholder="Asunto a tratar" title="El asunto es requerido" required>
+         <textarea title="Solo puedes escribir 255 caracteres" data-pattern="^.{1,255}$" required placeholder="Comentarios..." name="comments" ></textarea>
+         <input type="submit" value="Enviar">
+         <br>
+         <div class="loader none"><img src="assets/svg-loaders/three-dots.svg" alt="cargando..." title="cargando..."></div>
+       </form>
      </section>
-    <!-- <section class="section" data-scroll id="section21"></section>
-    <section class="section" data-scroll id="section22"></section>
+   <section class="section" data-scroll id="section21">
+     <h2 class="first title">Narrador de voz</h2>
+     <h3 class="title">Elige el narrador y escribe el texto a leer</h3>
+     <select name="voces" id="voces"></select>
+     <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Escribe algo..."></textarea>
+     <button class="button title">Escuchar</button>
+   </section>
+     <!-- <section class="section" data-scroll id="section22"></section>
     <section class="section" data-scroll id="section23"></section>
     <section class="section" data-scroll id="section24"></section>
     <section class="section" data-scroll id="section25"></section> -->
   </main>
-
 
   <script type="module" src="js/index.js"></script>
 </body>

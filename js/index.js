@@ -17,6 +17,7 @@ import consolaCSS from "./consola-message.js";
 import slider, { sliderMarginLeft } from "./slider.js";
 import cambiarScroll from "./scroll_spy.js";
 import smartVideo from "./smart_video.js";
+import validarFormulario, { showPassword } from "./validacion-formulario.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
@@ -77,20 +78,28 @@ document.addEventListener("DOMContentLoaded", () => {
   filtrar(".card", "#filtrar", "hidden");
   // sorteo
   sortear(".player", ".iniciar-sorteo", ".reiniciar-sorteo", "winner");
+  // slider con opacity
   slider(
     "#section17 .slider",
     "#section17 .slider-buttons .right",
     "#section17 .slider-buttons .left",
     "#section17 .slider-autoplay"
   );
+  // slider con margin left
   sliderMarginLeft(
     "#section18 .slider",
     "#section18 .slider-buttons .right",
     "#section18 .slider-buttons .left",
     "#section18 .slider-autoplay"
   );
+  // scroll spy on menu links
   cambiarScroll();
+  // video autoplay if is intersecting and paused if document visibility change
   smartVideo();
+  // validate form
+  validarFormulario("validacionForm","#validacionForm .loader");
+  // show password
+  showPassword('#validacionForm .password input','#validacionForm .password .toggle-password','assets/visible.png','assets/hidden.png');
   // TERMINA DOMContentLoaded
 });
 // dark mode

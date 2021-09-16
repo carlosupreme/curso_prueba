@@ -611,6 +611,100 @@ body::-webkit-scrollbar-thumb {
   object-fit: cover;
   object-position: center;
 }
+/* validacion de formulario */
+#section20 #validacionForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+#section20 #validacionForm input, textarea{
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+  background: var(--header);
+  color: var(--title);
+  border: 3px solid var(--border);
+  padding: 10px;
+}
+#validacionForm textarea{
+  height: 250px;
+  resize: none;
+}
+#section20 #validacionForm input[type="submit"]{
+  cursor: pointer;
+  background: var(--hover-item);
+  width: 100px;
+  transition: background 0.5s;
+}
+#section20 #validacionForm input[type="submit"]:hover{
+  background: var(--hover-item-active);
+}
+#section20 #validacionForm input:focus-within {
+  appearance:inherit;
+  background-image: none !important;
+  background-color: var(--header) !important;
+  color:var(--title);
+}
+#section20 #validacionForm *[required]:invalid{
+  border-color: #a00b0b;
+}
+#section20 #validacionForm *[required]:valid{
+  border-color: #11b617;
+}
+#section20 #validacionForm .password{
+  position: relative;
+  width: 90%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 25px 0;
+}
+
+#section20 #validacionForm .password input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#section20 #validacionForm .toggle-password{
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  background: url("assets/hidden.png") no-repeat center center / cover;
+  cursor: pointer;
+}
+.none{
+  display: none;
+}
+#section20 #validacionForm .invalid-message{
+  width: 90%;
+  border: none;
+  height: auto;
+  color: var(--title);
+  background: #ff0000;
+  padding: 5px 0;
+  margin-top: -20px;
+  border-radius: 5px;
+  text-align: center;
+}
+#section20 #validacionForm .password .invalid-message{
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+#section21 textarea{
+  resize: none;
+  width: 90%;
+  height: 100px;
+}
 /* HAMBURGER BUTTON */
 .hamburger {
   padding: 15px 15px;
