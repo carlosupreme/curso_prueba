@@ -18,6 +18,7 @@ import slider, { sliderMarginLeft } from "./slider.js";
 import cambiarScroll from "./scroll_spy.js";
 import smartVideo from "./smart_video.js";
 import validarFormulario, { showPassword } from "./validacion-formulario.js";
+import hablarTexto from "./narrador_de_voz.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
@@ -97,11 +98,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // video autoplay if is intersecting and paused if document visibility change
   smartVideo();
   // validate form
-  validarFormulario("validacionForm","#validacionForm .loader");
+  validarFormulario("validacionForm", "#validacionForm .loader");
   // show password
-  showPassword('#validacionForm .password input','#validacionForm .password .toggle-password','assets/visible.png','assets/hidden.png');
+  showPassword(
+    "#validacionForm .password input",
+    "#validacionForm .password .toggle-password",
+    "assets/visible.png",
+    "assets/hidden.png"
+  );
   // TERMINA DOMContentLoaded
 });
+// speech
+hablarTexto("voces", "leerTexto", "texto");
 // dark mode
 darkmode(".darkMode", "html", "dark");
 // SECCION 5 move the ball
@@ -115,4 +123,4 @@ window.addEventListener("scroll", (e) => {
 // deteccion de estado de red
 connection("conection0", "conection1");
 // consola con estilos css
-consolaCSS();
+consolaCSS("Hola crack ! 👾");
