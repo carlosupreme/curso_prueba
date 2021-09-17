@@ -499,3 +499,52 @@ function pelisGratis(array){
 }
 pelisGratis(peliculasEnArray)
 console.groupEnd('Peliculas automatizadas:')
+
+ // esta funcion escribe los numeros multiplos de 3 al 5 que hay desde el 0 hasta el numero pasado en el argumento sin repetir y tambien devuelve la suma de ellos
+
+function solution(number){
+  let multiplosCinco = [],
+      multiplosTres = []
+  if(typeof number !== 'number') return 'error'
+  if(number <= 0) return 0
+  
+  for(let i=0; i < number; i++){
+    if(i !== 0){
+      if(i % 5 === 0) multiplosCinco.push(i)
+      if(i % 3 === 0) multiplosTres.push(i)
+    }
+  }
+  const multiplos = [...multiplosCinco, ...multiplosTres]
+  const sinRepetir = [...new Set(multiplos)]
+  const suma = array=>{
+    let contador = 0
+    array.forEach(el=>{
+      contador += el
+    })
+    return contador
+  }
+  return {
+    'numero maximo': number,
+    'suma':suma(sinRepetir),
+    'numeros': sinRepetir
+  }
+    
+}
+
+console.log(solution(100))
+
+
+// let pins = `
+// I I I I\n
+//  I I I\n
+//   I I\n
+//    I`
+
+
+const arrelgoer = [1,2,3,4,5,6,7,8,9,10]
+
+
+let pins = 'I I I I\n I I I \n  I I  \n   I   '
+let numbers = '7 8 9 10\n 4 5 6 \n  2 3  \n   1   '
+console.log(pins)
+console.log(numbers)
