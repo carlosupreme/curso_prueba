@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap");
+:root {
+  --fondo: #fff;
+  --color-header: #000;
+  --color-main: #fff;
+  --color-second-header: rgb(117, 117, 117);
+  --color-second: rgb(204, 204, 204);
+  --header: "Open Sans", sans-serif;
+  --text: "Montserrat", sans-serif;
+  --header-size: 800;
+  --h2-size: 600;
+  --h3-size: 600;
+  --h4-size: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--fondo);
+  max-width: 1400px;
+  margin: auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: max-content;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+header h1 {
+  font-family: var(--header);
+  font-weight: var(--header-size);
+}
+header h2 {
+  font-family: var(--text);
+  text-transform: uppercase;
+  font-weight: var(--h2-size);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--color-second-header);
+}
+main {
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  margin-top: 35px;
+  columns: 4 250px;
+  column-gap: 1.5em;
+  padding: 0 50px;
+}
+.card {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5em;
+  cursor: pointer;
+}
+.card::before{
+  content: "Ver más";
+  top: 10px;
+  left: 10px;
+  width: 100px;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--color-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ;
+}
+
+/* on card hover */
+.card:hover .text{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.card:hover::before{
+  opacity: 1;
+  visibility: visible;
+}
+.card::before:hover{
+  background: red;
+}
+.card img {
+  width: inherit;
+  filter: brightness(0.7);
+  display: block;
+}
+.card .text {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  transform: translateY(150%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.4s;
+}
+
+.card .text * {
+  display: inline-block;
+  font-family: var(--text);
+  text-transform: capitalize;
+}
+.card .text h3 {
+  color: var(--color-main);
+  font-weight: var(--h3-size);
+  font-size: 32px;
+}
+.card .text h4 {
+  color: var(--color-second);
+  font-size: 13px;
+  font-weight: var(--h4-size);
+}
