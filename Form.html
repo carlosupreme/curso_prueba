@@ -1,0 +1,55 @@
+<form method="POST" action="" enctype="multipart/form-data" id="form" required>
+          <!-- input para FormSubmit.co y redireccione -->
+          <input type="hidden" name="_next" value="https://mantenimientotintoreriatacuba.netlify.app/recibido.html"/>
+          <!-- input para estilos del correo -->
+          <input type="hidden" name="_template" value="table" />
+          <!-- input para Subject del email -->
+          <input type="hidden" name="_subject" value="Nueva Solicitud de Mantenimiento..."/>
+          <!-- input para copia de email -->
+          <input type="hidden" name="_cc" value=""/>
+          <!-- input para autoresponse -->
+          <input type="hidden" name="_autoresponse" value="Tu solicitud ha sido recibida, esta es una copia de los datos que enviaste. Buen dia ">
+          <!-- formulario -->
+          <!-- nombre -->
+          <input name="Nombre" id="Nombre" type="text" placeholder="Tu nombre" title="Nombre solo acepta letras y espacios" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required/>
+          <!-- email -->
+          <input type="email" name="email" placeholder="Tu correo electronico" title="Correo invalido" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+          <!-- area del equipo -->
+          <label for="Area">Área del equipo:</label>
+          <select name="Area" id="Area" required>
+            <option value="NA">NA (no aplica)</option>
+            <option value="Administracion">Administración</option>
+            <option value="Azotea">Azotea</option>
+            <option value="Cuarto de maquinas">Cuarto de maquinas</option>
+            <option value="Lavado en agua">Lavado en agua</option>
+            <option value="Lavado en seco">Lavado en seco</option>
+            <option value="Lavanderia">Lavanderia</option>
+            <option value="Planchado">Planchado</option>
+            <option value="Teñido">Teñido</option>
+            <option value="Tiendas">Tiendas</option>
+          </select>
+          <!-- tag del equipo -->
+          <label for="Tag">Tag del equipo:</label>
+          <select name="Tag" id="Tag" required>
+          </select>
+          <!-- falla -->
+          <input autocomplete="off" type="text" name="Falla" id="Falla" placeholder="Falla que presenta" required/>
+          <!-- observaciones -->
+          <textarea name="Observaciones" id="Observaciones" cols="30" rows="10" placeholder="Describe la falla" required></textarea>
+          <!-- imagen (file) input-->
+          <div id="upload_container"> <input name="Foto" accept="image/*" type="file" /> </div>
+          <!-- imagen preview -->
+          <img id="foto">
+          <!-- prioridad -->
+          <label for="Prioridad">¿Cuál es la prioridad?</label>
+          <select name="Prioridad" required>
+            <option value="Baja">Baja</option>
+            <option value="Media">Media</option>
+            <option value="Alta">Alta</option>
+          </select>
+          <!-- folio readonly make it diferent-->
+          <label for="Folio">Tu folio se genera automaticamente</label>
+          <input type="text" name="Folio" id="folio" value="" readonly>
+          <!-- submit button -->
+          <button type="submit">Enviar</button>
+        </form>
