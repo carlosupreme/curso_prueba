@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   countdown(
     "#section1 .container-countdown2",
-    "25 dec 2022, 00:00:00",
+    "01 jan 2023, 00:00:00",
     "Happy Holidays!!"
   );
   // SECTION 2
