@@ -24,12 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // SECTION 1
   countdown(
     "#section1 .container-countdown",
-    "30 oct 2021, 06:00:00",
+    "30 oct 2022, 06:00:00",
     "Happy Birthday"
   );
   countdown(
     "#section1 .container-countdown2",
-    "25 dec 2021, 00:00:00",
+    "25 dec 2022, 00:00:00",
     "Happy Holidays!!"
   );
   // SECTION 2
